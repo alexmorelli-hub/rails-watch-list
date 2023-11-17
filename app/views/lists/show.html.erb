@@ -1,0 +1,9 @@
+<h1><%= @list.name %></h1>
+
+<%# form for bookmarks %>
+
+<%# Show the bookmarks %>
+<% @list.bookmarks.each do |bookmark| %>
+  <p><%= bookmark.movie.title %></p>
+  <img src=<%= bookmark.movie.poster_url %> alt="" class='movie-poster'>
+<% end %>

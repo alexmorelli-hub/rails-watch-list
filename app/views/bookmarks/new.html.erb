@@ -1,0 +1,8 @@
+<p><%= @list.name %>'s new bookmark</p>
+
+<%# form for bookmarks %>
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :movie_id, collection: Movie.all, label: 'Select the movie' %>
+  <%= f.input :comment, label: 'Leave your comment' %>
+  <%= f.button :submit, 'Create bookmark' %>
+<% end %>
